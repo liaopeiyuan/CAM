@@ -64,8 +64,8 @@ preprocess = transforms.Compose([
    normalize
 ])
 
-response = requests.get(IMG_URL)
-img_pil = Image.open(io.BytesIO(response.content))
+#response = requests.get(IMG_URL)
+img_pil = Image.open('/data/darknet/concentration/saigon.jpg')
 img_pil.save('test.jpg')
 
 img_tensor = preprocess(img_pil)
